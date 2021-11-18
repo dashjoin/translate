@@ -41,6 +41,8 @@ TODO: placeholders
 
 TODO: arguments
 
+When you are happy with the translations, you can download the text bundle from this page. See the section below on how to add this file to your project for production.
+
 ### Rules
 
 Any website or application contains parts that must not be translated, for instance a table displaying dynamic results from a database. Dashjoin Translate uses [CSS selectors](https://www.w3schools.com/cssref/css_selectors.asp) to identify these elements. The rules dialog shows an editable overview table with each row representing one rule. A text is not translated if its HTML element does not match any of the rules.
@@ -59,6 +61,52 @@ The language picker is a small widget that provides a default functionality for 
 
 ## Use Dashjoin Translate for Your Project
 
+This section describes how you can deploy the translations to your project.
+
 ### Adding the Translate Script
 
-### Adding the Translations File
+Dashjoin Translate requires you to add the following files to your website or application:
+
+* browser.js: this script contains the Dashjoin Translate runtime
+* dji18n.json: this is the file you downloaded from the translations page
+
+The following sections describe how to do this for different platforms.
+
+#### Static HTML
+
+```
+<html>
+  <head>
+    <!-- insert this script tag and make sure the translations are available at /dji18n.json -->
+    <script src="https://github.com/dashjoin/translate/blob/main/browser.js"></script>
+  <head>
+  ...
+```
+
+#### Wordpress
+
+TODO
+
+### Translations File Format
+
+This section describes the translation file format. The file must have a valid JSON structure. Note that you can edit this file and put it under version control.
+
+* id: domain name of the project to be translated
+* language: the source language
+* targets: array of target languages
+* rules: array of rules with
+  * name: rule name used in the WYSIWYG editor
+  * rule: the CSS selector to determine which HTML elements exclude
+  * description: rule documentation
+  * disabled: flag indicating whether the rule is disabled
+* resources: map with the languages as keys
+  * namespaces: array of pages
+    * id: page path
+    * resource: map with the original text as the map key
+      * text
+      * ctime
+      * status
+      * mtime
+
+
+
