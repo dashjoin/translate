@@ -85,7 +85,14 @@ The following sections describe how to do this for different platforms.
 
 #### Wordpress
 
-TODO
+There are several options you can use to add a script to your wordpress site. The most convenient is by using the [Insert Headers and Footers Plugin](https://wordpress.org/plugins/insert-headers-and-footers/).
+
+* Upload the translation to the media library (by default Wordpress disallows .json files - please rename the file to dji18n.txt in this case)
+* Install the "Insert Headers and Footers" plugin
+* Go to Settings > Header and Footer Scripts
+* Enter the script tag shown above to "Scripts in header" and save the settings
+
+TODO: need to be able to specify the dji18n.json URL
 
 ### Updating Translations
 
