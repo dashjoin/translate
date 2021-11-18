@@ -87,6 +87,17 @@ The following sections describe how to do this for different platforms.
 
 TODO
 
+### Updating Translations
+
+This section describes how you can add or update translations:
+
+* Visit your website or application
+* Open the browser console (CTRL + SHIFT + I in most browsers)
+* In the script console, enter: dashjoin.i18n.enableDevMode()
+* This re-activates the translation mode
+* Perform your changes
+* Download the new version of the dji18n.json file and add it to your site as described in the section above
+
 ### Translations File Format
 
 This section describes the translation file format. The file must have a valid JSON structure. Note that you can edit this file and put it under version control.
@@ -108,5 +119,5 @@ This section describes the translation file format. The file must have a valid J
       * status
       * mtime
 
-
+TODO: language picker options
 
