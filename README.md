@@ -29,7 +29,17 @@ Once you confirm your target language choice in the welcome screen, you enter th
 
 ### Main Menu
 
+The main menu provides you with a quick summary about your current translation project. Use the combo box to change the display language or navigate to either the translations, rules, or configuration pages.
+
 ### Translations
+
+The translations menu provides you with an overview table. Each row represents a page in your website or application and indicates the number of translated texts are well as the translation coverage for each language. You can machine translate all missing texts right here or click the table cells to get to the translation summary for a given page and language.
+
+The translation summary page shows you the original text, its translation, and whether the machine translation was modified by you or another user. Simply click the target column to add or edit the translation.
+
+TODO: placeholders
+
+TODO: arguments
 
 ### Rules
 
