@@ -43,9 +43,19 @@ TODO: arguments
 
 ### Rules
 
+Any website or application contains parts that must not be translated, for instance a table displaying dynamic results from a database. Dashjoin Translate uses [CSS selectors](https://www.w3schools.com/cssref/css_selectors.asp) to identify these elements. The rules dialog shows an editable overview table with each row representing one rule. A text is not translated if its HTML element does not match any of the rules.
+
+Note that it is best practise to make the rules as general as possible in order for them to be immune to layout changes performed on your website or application later on. There's also a name and description field that allows you to document the reason why a given element is to be excluded. Rules can also be activated and deactivated.
+
+New rules applying to specific texts can also be added using the WYSIWYG editor. Likewise, a rule causing a text to be excluded can be deactivated in the WYSIWYG editor.
+
 ### Configuration
 
+The configuration screen allows you to specify more language option. Dashjoin Translate guesses the original language used by your website or application. The configuration screen allows you to override this value. Correctly setting this parameter helps the translation API to generate better translations. The second option allows you to specify which languages you would like your project to be translated into. Note that you can always add new languages later on. 
+
 ### Language Picker
+
+The language picker is a small widget that provides a default functionality for your users to pick their preferred display language. For information on the available parameters and how to customize this component, please see the translation file format section below.
 
 ## Use Dashjoin Translate for Your Project
 
