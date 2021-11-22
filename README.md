@@ -70,7 +70,24 @@ Dashjoin Translate requires you to add the following files to your website or ap
 * browser.js: this script contains the Dashjoin Translate runtime
 * dji18n.json: this is the file you downloaded from the translations page
 
-The following sections describe how to do this for different platforms.
+The browser.js file must be added via an HTML script element. You may have the script src attribute point to an external URL or download the script and host if locally.
+
+By default, the script looks for the translation files at the URL /dji18n.json. You may also specify the URL via the dji18nurl attribute:
+
+```
+<script src="..." dji18nurl="..."></script>
+```
+
+Finally, there's the option to copy and paste the file contents directly into a script tag which saves the HTTP round trip:
+
+```
+<script src="..."></script>
+<script id='dji18n'>
+  contents of the file dji18n.json
+</script>
+```
+
+The following sections shows examples of how to do this for different platforms.
 
 #### Static HTML
 
@@ -92,7 +109,12 @@ There are several options you can use to add a script to your wordpress site. Th
 * Go to Settings > Header and Footer Scripts
 * Enter the script tag shown above to "Scripts in header" and save the settings
 
-TODO: need to be able to specify the dji18n.json URL
+```
+<script 
+  src="https://github.com/dashjoin/translate/blob/main/browser.js"
+  dji18nurl="/wp-content/uploads/YEAR/MONTH/dji18n.txt"
+></script>
+```
 
 ### Updating Translations
 
