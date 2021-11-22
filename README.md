@@ -37,9 +37,18 @@ The translations menu provides you with an overview table. Each row represents a
 
 The translation summary page shows you the original text, its translation, and whether the machine translation was modified by you or another user. Simply click the target column to add or edit the translation.
 
-TODO: placeholders
+#### Placeholders
 
-TODO: arguments
+Sometimes the texts contain hyperlinks or boldface passages. Of course, in the translations, these elements must be in the correct places. The translations dialog displays these elements via placeholders that are shown as oval numbered elements at the respective position in the original text and its translation. When you edit the translation, these placeholders are shown as XML elements:
+
+```
+<ph id="1"/>
+```
+You can move and edit these placeholders, in case the machine translation did not place them at the right position.
+
+#### Arguments
+
+There are cases, where dynamic content is embedded in text. Consider the following example sentence: "You uploaded 15 images to this site", where the number 15 is obviously a dynamic element. The system marks 15 as an argument. An argument is shown as a numbered green rectangle. When editing, it is shown as an XML element. The sentence above is shown as: "You uploaded <x id="1"/> images to this site".
 
 When you are happy with the translations, you can download the text bundle from this page. See the section below on how to add this file to your project for production.
 
