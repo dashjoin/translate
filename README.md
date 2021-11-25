@@ -76,10 +76,10 @@ This section describes how you can deploy the translations to your project.
 
 Dashjoin Translate requires you to add the following files to your website or application:
 
-* translate.js: this script contains the Dashjoin Translate runtime
+* dashjoin-translate.js: this script contains the Dashjoin Translate runtime
 * dji18n.json: this is the file you downloaded from the translations page
 
-The translate.js file must be added via an HTML script element. You may have the script src attribute point to an external URL or download the script and host if locally.
+The dashjoin-translate.js file must be added via an HTML script element. You may have the script src attribute point to an external URL or download the script and host if locally.
 
 By default, the script looks for the translation files at the URL /dji18n.json. You may also specify the URL via the dji18nurl attribute:
 
@@ -104,7 +104,7 @@ The following sections shows examples of how to do this for different platforms.
 <html>
   <head>
     <!-- insert this script tag and make sure the translations are available at /dji18n.json -->
-    <script src="https://dashjoin.com/translate.js"></script>
+    <script src="https://dashjoin.com/translate/1.0.0/dashjoin-translate.js"></script>
   <head>
   ...
 ```
@@ -120,7 +120,7 @@ There are several options you can use to add a script to your wordpress site. Th
 
 ```
 <script 
-  src="https://dashjoin.com/translate.js"
+  src="https://dashjoin.com/translate/1.0.0/dashjoin-translate.js"
   dji18nurl="/wp-content/uploads/YEAR/MONTH/dji18n.txt"
 ></script>
 ```
