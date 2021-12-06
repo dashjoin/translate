@@ -167,3 +167,46 @@ This section describes the translation file format. The file must have a valid J
   * class: the CSS class to apply (default = dj-ls)
   * id: the ID to use (default = dj-ls)
   * selector: the selector use (default = #dj-ls)
+
+### Applying Your Custom Design to the Language Picker Widget
+
+By default, the element container has ID 'dj-ls' and CSS class 'dj-ls' is applied to the container of the language widget.
+
+The rendered button is a regular ```<button id="dj-ls-bt" ... >``` and the language popup is a regular
+```<select id="dj-ls-sl" ...>``` with one value like ```<option value="en">English - EN</option>``` per language.
+
+These visuals can be easily adjusted by defining CSS attributes using the ID and/or CSS class.
+
+### Using a Custom UI for Switching Languages
+
+You can also disable the widget completely and use a completely separate UI with your own design and GUI.
+The Dashjoin Translate API makes it very easy to integrate basically any UI to switch languages.
+The language switching API is defined as follows:
+
+* dashjoin.i18n.setLanguage( locale: string )
+
+Changes the language to the given locale (ISO code as it is used in the JSON config for the resources).
+The specified language locale must be configured as either the source or a target language.
+If an unconfigured language is specified, the function call will be ignored.
+
+## Example using flags for switching languages:
+
+This switcher uses flags for 4 languages (German - de, English - en, Spanish -es and French - fr):
+
+<img width="221" alt="image" src="https://user-images.githubusercontent.com/62463897/144871380-a88d5a29-7b05-4e7e-8cdd-4b9b08935141.png">
+
+This is the HTML code (the CSS to position the flags is not shown here):
+
+```
+<span id="my-dashjoin-translate">
+  <a href="#" onclick="dashjoin.i18n.setLanguage('de')" title="Deutsch" class="flag-icon-de"></a>
+  <a href="#" onclick="dashjoin.i18n.setLanguage('en')" title="English" class="flag-icon-us"></a>
+  <a href="#" onclick="dashjoin.i18n.setLanguage('es')" title="español" class="flag-icon-es"></a>
+  <a href="#" onclick="dashjoin.i18n.setLanguage('fr')" title="français" class="flag-icon-fr"></a>
+</span>
+```
+
+When a flag is clicked, the API call is executed in the onclick handler and sets the language accordingly.
+
+The flags are rendered via the CSS classes "flag-icon-XX", as defined in this project:
+https://github.com/lipis/flag-icons
