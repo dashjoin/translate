@@ -141,6 +141,7 @@ This section describes how you can add or update translations:
 This section describes the translation file format. The file must have a valid JSON structure. Note that you can edit this file and put it under version control.
 
 * id: domain name of the project to be translated
+* version: version of the format (currently = 1)
 * language: the source language
 * targets: array of target languages
 * rules: array of rules with
@@ -156,6 +157,13 @@ This section describes the translation file format. The file must have a valid J
       * ctime
       * status
       * mtime
-
-TODO: language picker options
-
+* languagePicker: the settings of the language picker widget. Note that all settings are optional:
+  * disabled: true if widget should be disabled. You can integrate your own GUI elements for switching languages
+  * position: the CSS position of the widget. Default = "position:fixed; bottom:0.5em; right:0.5em" (bottom right)
+  * parentSelector: the CSS selector of the element in which to append the widget
+  * showEnglishLanguage: true if languages should be displayed in English (default = show autonyms)
+  * showLongLanguage: true if language should be displayed completely (default = show ISO code)
+  * showIcon: ID of the icon to display, see https://fontawesome.com/v4.17/icons. Default = fa-language
+  * class: the CSS class to apply (default = dj-ls)
+  * id: the ID to use (default = dj-ls)
+  * selector: the selector use (default = #dj-ls)
